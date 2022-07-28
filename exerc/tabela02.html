@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            font-size: 3em;
+            text-align: center;
+            font-variant: small-caps;
+        }
+        caption{
+            background-color: gray;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+        thead, tfoot{
+            background-color: gray;
+        }
+        td, th{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabela</h1>
+    <!--
+        anatomia de tabelas grandes
+        table
+            thead
+                tr, td, th
+            tbody
+                tr, td, th
+            tfoot
+                tr, td, th
+    -->
+    <table>
+        <caption>Relação População x km<sup>2</sup></caption>
+        <thead>
+            <th>Estado</th>
+            <th>População</th>
+            <th>tamanho</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Goias</td>
+                <td>1.234.232</td>
+                <td>340.086 km<sup>2</sup></td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td>1.856.784</td>
+                <td>476.252 km<sup>2</sup>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td>1.148.081</td>
+                <td>501.565 km<sup>2</sup>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td>2.266.698</td>
+                <td>180.986 km<sup>2</sup>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>6.432.856</td>
+                <td>1.598.968 km<sup>2</sup></td>
+            </tr>
+
+        </tfoot>
+    </table>
+</body>
+
+</html>
