@@ -20,73 +20,97 @@
             background-color: gray;
             color: white;
         }
+        .one{
+            background-color: rgb(140, 141, 141);
+            color: white;
+        }
+        .two{
+            background-color: rgb(251, 255, 0);
+        }
+        .three{
+            background-color: rgba(13, 255, 0, 0.237);
+        }
+        .four{
+            background-color: rgba(21, 0, 255, 0.335);
+        }
+        #container{
+            overflow-x: auto;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
-    <table>
-        <caption>Boletim</caption>
-        <thead class="soma">
-            <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplina</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Média</th>
-            </tr>
-            <tr>
-                <th>nota 1</th>
-                <th>nota 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="4">Exatas</th>
-                <td>Matemática</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <td>Fisica</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <td>Quimica</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <td>Biologia</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr class="soma">
-                <td colspan="4">Média Exatas</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <th rowspan="2">Exatas</th>
-                <td>História</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr>
-                <td>Geografia</td>
-                <td>0.0</td>
-                <td>0.0</td>
-                <td>0.0</td>
-            </tr>
-            <tr class="soma">
-                <td colspan="4">Média Humanas</td>
-                <td>0.0</td>
-            </tr>
-        </tbody>
-
-    </table>
+    <div id="container">
+        <table>
+            <colgroup>
+                <col class="one">
+                <col class="two">
+                <col class="three" span="2">
+                <col class="four">
+            </colgroup>
+            <caption>Boletim</caption>
+            <thead class="soma">
+                <tr>
+                    <th rowspan="2" scope="col">Área</th>
+                    <th rowspan="2" scope="col">Disciplina</th>
+                    <th colspan="2" scope="colgroup">Notas</th>
+                    <th rowspan="2" scope="col">Média</th>
+                </tr>
+                <tr>
+                    <th>nota 1</th>
+                    <th>nota 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="4" scope="rowgroup">Exatas</th>
+                    <td>Matemática</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Fisica</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Quimica</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Biologia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr class="soma">
+                    <td colspan="4" scope="row">Média Exatas</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Exatas</th>
+                    <td>História</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Geografia</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr class="soma">
+                    <td colspan="4" scope="row">Média Humanas</td>
+                    <td>0.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
 </body>
 </html>
