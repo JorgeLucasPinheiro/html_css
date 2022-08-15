@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.612);
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        p , li , ul{
+          text-align: justify;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            
+        }
+        a:hover{
+            color: white;
+            background-color: black;
+            
+        }
+        #frame{
+            border: 1px solid black;
+            height: 400px;
+            width: 90vw;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 10px;
+        }
+        div{
+            border: 1px solid black;
+            margin: 10px;
+            padding: 5px;
+            background-color: lightgray;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 10px;
+        }
+        #nav{
+            height: 130px;
+            width: 130px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando Iframe em exibição</h1>
+    <div id="nav">
+        <ul>
+            <li><a href="fundo.html" target="frame">fundo_1</a></li>
+            <li><a href="fundo02.html" target="frame">fundo_2</a></li>
+            <li><a href="fundo03.html" target="frame">fundo_3</a></li>
+            <li><a href="fundo04.html" target="frame">fundo_4</a></li>
+            <li><a href="fundo05.html" target="frame">fundo_5</a></li>
+        </ul>
+    </div>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea magnam in impedit error, quos eaque inventore corporis vero asperiores vitae molestiae qui et aliquid suscipit eius, aliquam esse quae nihil?</p>
+    </div>
+    <iframe srcdoc="<h1> Escolha uma das opcões acima:</h1>" frameborder="0" name="frame" id="frame"></iframe>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, numquam beatae tempore illo aspernatur ex distinctio harum delectus nemo aut. Deleniti sint voluptate est vitae sit, delectus aspernatur aperiam! Perferendis?</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum labore, vitae provident ipsa similique quae illo nesciunt quis nihil quam, velit magnam, iure culpa? Dignissimos at debitis architecto quis.</p>
+    </div>
+</body>
+</html>
