@@ -1,1 +1,1 @@
-Os dados foram enviados
+Seu formulário foi enviado
