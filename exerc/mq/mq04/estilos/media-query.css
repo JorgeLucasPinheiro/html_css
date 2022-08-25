@@ -25,6 +25,9 @@ grandes telas: acima de 1200px
         text-shadow: none;
         color: black;
     }
+    main::after{
+        content: "Criado por Pinheiro";
+    }
     img#phone {display: none;}
     img#tablet { display: none;}
     img#pc {display: none;}
