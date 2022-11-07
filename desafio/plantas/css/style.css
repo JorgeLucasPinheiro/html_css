@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+:root{
+    --destaque:#00F51D;
+    --fundo:#23752D;
+    --titulo:#00C217;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --black:#2e2d35;
+    --light-color:#666;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    background: #eee;
+}
+
+.cabeçalho{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem .5rem;
+    background: #ffff;
+    box-shadow: var(--box-shadow);
+}
+
+.cabeçalho .logo{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: --black;
+    margin-left: 2rem;
+}
+
+.cabeçalho .logo i{
+    color: var(--destaque);
+}
+
+.cabeçalho .navbar a{
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 .5rem;
+}
+
+.cabeçalho .navbar a:hover{
+    background: var(--titulo);
+    border-radius: 10px;
+    padding: 5px;
+    color: #eee;
+}
+
+#menu{
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.home{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: url(../imagens/baner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding:15rem 0;
+    text-align: center;
+}
+
+.home .baner h3{
+    font-size: 3em;
+    color: rgb(201, 201, 201);
+}
+
+.home .baner h3 span{
+    color: lightgreen;
+}
+
+.home .baner p{
+    color: rgb(199, 196, 196);
+    font-size: 1.7em;
+    padding: 1rem 0;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.container {
+    width: 90vw;
+}
+
+.contem{
+    background:#ffff;
+    margin:1.5rem auto; padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    max-width: 120rem;
+    justify-items: center;
+    
+    
+}
+.titulo{
+    font-size: 3rem;
+    margin: 10px; padding-left: 5px;
+    border-left: 3px solid var(--destaque);
+    border-bottom: 3px solid var(--destaque);
+}
+
+.contem p{
+    font-size: 1.8rem;
+    margin: 10px;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.btn{
+    padding: 5px; margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    color: #2e2d35;
+    text-decoration: none;
+    
+}
+
+.btn:hover{
+    background: var(--destaque);
+    color: #eee;
+}
+
+footer{
+    background: black;
+}
+
+footer .contem-img {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.icone{
+    margin: 2rem 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+footer div p{
+    text-align: center;
+}
+
+.linksfinais{
+    background: black;
+    margin: auto;
+    text-align: center;
+}
+
+.linksfinais > a{
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(100, 99, 99);
+}
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 50%;
+    }
+
+    .cabeçalho{
+        padding: 2rem;
+    }
+
+    section{
+        padding: .1rem;
+    }
+
+}
+
+@media (max-width:768px){
+    
+    #menu{
+        display: inline-block;
+        font-size: 3rem;
+        position: relative;
+    }
+
+    .home{
+        text-align: center;
+    }
+
+    .cabeçalho .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 20rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .cabeçalho .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .cabeçalho .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .home{
+        text-align: center;
+    }
+
+    .cabeçalho{
+        font-size: 2.5rem;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+}

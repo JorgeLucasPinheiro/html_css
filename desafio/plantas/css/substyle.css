@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+:root{
+    --destaque:#00F51D;
+    --fundo:#23752D;
+    --titulo:#00C217;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --black:#2e2d35;
+    --light-color:#666;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    background: #eee;
+}
+
+.cabeçalho{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem .5rem;
+    background: #ffff;
+    box-shadow: var(--box-shadow);
+}
+
+.cabeçalho .logo{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: --black;
+    margin-left: 2rem;
+}
+
+.cabeçalho .logo i{
+    color: var(--destaque);
+}
+
+.cabeçalho .navbar a{
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 .5rem;
+}
+
+.cabeçalho .navbar a:hover{
+    background: var(--titulo);
+    border-radius: 10px;
+    padding: 5px;
+    color: #eee;
+}
+
+#menu{
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.btn{
+    padding: 5px; margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    color: #2e2d35;
+    text-decoration: none;
+    
+}
+
+.btn:hover{
+    background: var(--destaque);
+    color: #eee;
+}
+
+.container {
+    width: 90vw;
+    
+}
+
+.contem{
+    background:#ffff;
+    margin: auto;
+    padding: 2rem 4rem 10rem;
+    box-shadow: var(--box-shadow);
+    max-width: 120rem;
+    justify-items: center;
+    margin-top: 90px;
+}
+
+.contem .titulo{
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.774);
+    text-align: center;
+}
+
+.contem img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    height: 70%;
+    width: 70%;
+    padding: 10px;
+}
+
+.contem h2{
+    font-size: 3rem;
+    margin: 20px;
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.contem h3{
+    font-size: 2rem;
+    margin: 20px;
+    color: rgba(0, 0, 0, 0.76);
+    margin-left: 3rem;
+}
+.contem p{
+    font-size: 1.8rem;
+    text-align: justify;
+    padding: 5px;
+}
+
+footer{
+    background: black;
+}
+
+footer .contem-img {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.icone{
+    margin: 2rem 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+footer div p{
+    text-align: center;
+}
+
+.linksfinais{
+    background: black;
+    margin: auto;
+    text-align: center;
+}
+
+.linksfinais > a{
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(100, 99, 99);
+}
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 60%;
+    }
+
+    .cabeçalho{
+        padding: 2rem;
+    }
+
+    section{
+        padding: .1rem;
+    }
+
+    .contem{
+        margin-top: 75px;
+    }
+}
+
+@media (max-width:768px){
+    
+    #menu{
+        display: inline-block;
+        font-size: 3rem;
+        position: relative;
+    }
+
+    .home{
+        text-align: center;
+    }
+
+    .cabeçalho .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 20rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .cabeçalho .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .cabeçalho .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .contem img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 550px;
+        width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        text-align: center;
+    }
+
+    .cabeçalho{
+        font-size: 2.5rem;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+}
